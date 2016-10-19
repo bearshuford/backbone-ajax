@@ -9,15 +9,18 @@ $(function(){
 
    var $app = $('#app');
    var $button = $('#app button');
-   var $posts  = $('<div class="posts">')
+   var $posts  = $('<ul class="posts">')
    var fetchedItems = new models.ItemCollection();
 
+   $app.append($posts);
    $button.click(event, function(){
       event.preventDefault();
+      $posts.hide();
+      $posts.empty();
+
       $button.prop('disabled',true);
       $button.html('Loading...');
-      $posts.empty();
-      $posts.remove();
+
       fetchedItems.fetch();
    });
 
@@ -26,14 +29,11 @@ $(function(){
    });
 
    fetchedItems.on('sync', function(){
-      setTimeout(function(){
-         $button.html('load');
+      $posts.slideDown(400,function(){
          $button.prop('disabled',false);
-         $app.append($posts);
-      }, 100);
+         $button.html('load');
+      });
 
    });
-
-
 
 });

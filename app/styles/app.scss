@@ -19,16 +19,25 @@ img {
 #app{
    display: flex;
    flex-flow: column nowrap;
-   width: 75%;
-   min-width: 800px;
+   width: 60%;
+   min-width: 600px;
    margin: 0 auto;
    align-items: center;
 }
 
 button {
-   margin: 24px 0;
+   margin: 40px 0;
    line-height: 60px;
    width: 180px;
+   cursor: pointer;
+   font-size: 16px;
+}
+
+.posts{
+   list-style: none;
+   overflow: hidden;
+   width: 100%;
+   padding: 10px;
 }
 
 .entry{
