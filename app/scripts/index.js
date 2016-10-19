@@ -19,7 +19,7 @@ $(function(){
       $posts.empty();
 
       $button.prop('disabled',true);
-      $button.html('Loading...');
+      $button.html('loading...');
 
       fetchedItems.fetch();
    });
@@ -29,9 +29,9 @@ $(function(){
    });
 
    fetchedItems.on('sync', function(){
-      $posts.slideDown(400,function(){
+      $posts.slideDown(500,function(){
          $button.prop('disabled',false);
-         $button.html('load');
+         $button.html('get stuff');
       });
 
    });
