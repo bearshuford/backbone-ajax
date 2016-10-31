@@ -4,7 +4,7 @@ var Item = Backbone.Model.extend();
 
 var ItemCollection = Backbone.Collection.extend({
    model: Item,
-   url: 'http://tiny-lasagna-server.herokuapp.com/collections/posts'
+   url: 'https://tiny-lasagna-server.herokuapp.com/collections/posts'
 
 });
 
